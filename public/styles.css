@@ -1,0 +1,103 @@
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", system-ui, -apple-system, sans-serif;
+  background: #f2f6f4;
+  color: #1f2a24;
+}
+
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 28px;
+  background: #14532d;
+  color: #f2fbf5;
+}
+.topbar h1 { margin: 0; font-size: 1.5rem; letter-spacing: 0.5px; }
+
+.user-bar { display: flex; gap: 12px; align-items: center; }
+
+.card {
+  background: #fff;
+  border-radius: 14px;
+  box-shadow: 0 6px 24px rgba(20, 83, 45, 0.10);
+  padding: 24px;
+}
+
+.auth-card { max-width: 400px; margin: 48px auto; }
+label { display: block; margin-bottom: 14px; font-size: 0.9rem; }
+
+input, select {
+  width: 100%;
+  padding: 10px 12px;
+  margin-top: 6px;
+  border: 1px solid #cfddd3;
+  border-radius: 8px;
+  font: inherit;
+}
+
+.btn {
+  border: none;
+  border-radius: 8px;
+  padding: 10px 18px;
+  font: inherit;
+  cursor: pointer;
+}
+.btn-primary { background: #16a34a; color: #fff; width: 100%; }
+.btn-primary:hover { background: #15803d; }
+.btn-ghost { background: transparent; color: #f2fbf5; border: 1px solid #f2fbf5; }
+
+.switch-line { text-align: center; font-size: 0.9rem; }
+.switch-line a { color: #16a34a; }
+.error { color: #b3261e; text-align: center; }
+.muted { color: #6b7f73; }
+.hidden { display: none !important; }
+
+main { max-width: 960px; margin: 0 auto; padding: 0 16px 40px; }
+
+.stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  margin: 28px 0 16px;
+}
+.stat h3 { margin: 0 0 6px; color: #476354; font-size: 0.95rem; }
+.money { font-size: 1.6rem; font-weight: 700; margin: 0; }
+.money.in { color: #16a34a; }
+.money.out { color: #dc2626; }
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1.4fr;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+.entries { list-style: none; margin: 0; padding: 0; }
+.entries li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 4px;
+  border-bottom: 1px solid #e5efe8;
+}
+.entries .note { font-weight: 600; }
+.entries .meta { font-size: 0.8rem; color: #6b7f73; }
+.entries .amt { font-weight: 700; }
+.entries .amt.in { color: #16a34a; }
+.entries .amt.out { color: #dc2626; }
+.entries button {
+  border: 1px solid #cfddd3;
+  background: #f7faf8;
+  border-radius: 6px;
+  padding: 4px 10px;
+  cursor: pointer;
+  font-size: 0.8rem;
+  margin-left: 10px;
+}
+
+@media (max-width: 760px) {
+  .stats, .grid { grid-template-columns: 1fr; }
+}
